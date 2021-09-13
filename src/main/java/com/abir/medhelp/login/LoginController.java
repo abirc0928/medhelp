@@ -8,6 +8,6 @@ public class LoginController {
 
 	@GetMapping("/hello")
     public String getTreeById() {
-        return "Hello world";
+        return "Hello world" ;
     }
 }
