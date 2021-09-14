@@ -1,0 +1,73 @@
+body{
+    margin: 0;
+    background: url(/static/img/5.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+.form{
+    width: 400px;
+    height: 480px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    border-radius: 4%;
+    padding: 70px 40px;
+}
+.profile{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: 150px;
+    cursor: hand;
+}
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+.form p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+.form input{
+    width: 100%;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: aliceblue;
+    font-size: 16px;
+}
+.form input[type="submit"]{
+    border: none;
+    outline: none;
+    background: #1CB8E3;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px; 
+    cursor: hand;
+}
+.form input[type="submit"]:hover{
+    background: #39dc79;
+    color: #000;
+}
+.Logo{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 25px;
+    top: -15px;
+    cursor: hand;
+}
+

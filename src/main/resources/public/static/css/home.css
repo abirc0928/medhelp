@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.cover{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/static/img/2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.bar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width:120px;
+    cursor: pointer;
+}
+.bar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.bar ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+.bar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #00FFFF;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.bar ul li:hover::after{
+    width: 100%;
+}
+.logout{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    padding: 10px;
+    position: relative;
+    bottom: -15px;
+    bottom: -17px;
+}
+.text{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+}
+.text h1{
+    font-size: 60px;
+    margin-top: 80px;
+}
+.text p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+.cover input[type="submit"]{
+    width: 400px;
+    height: 70px;
+    border: none;
+    outline: none;
+    background: #1CB8E3;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px; 
+    cursor: hand;
+    padding: 10px;
+}
+.cover input[type="submit"]:hover{
+    background: #39dc79;
+    color: #000;
+}

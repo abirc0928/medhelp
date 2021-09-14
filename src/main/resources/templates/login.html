@@ -1,0 +1,39 @@
+
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<title>MedHelp</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="/static/css/login.css" />
+</head>
+<body>
+	<img src="/static/img/Logo.png" class="Logo">
+	<div class="form">
+		<img src="/static/img/profile.png" class="profile">
+		<h1>Login User</h1>
+
+		<form action="#" th:action="@{/login}"
+			method="POST">
+			
+			<p>Email ID</p>
+			<input type="text" name="userName" placeholder="Enter email ID">
+			
+			<p>Password</p>
+			<input type="password" name="password" placeholder="Enter Password">
+
+			<input type="submit" name="login" value="Login"> 
+			
+			<input
+				type="submit" name="admin" value="Login as Admin"
+				onClick="javascript: form.action='Admin_login.php';"> <input
+				type="submit" name="cadmin" value="Create User Account"
+				onClick="javascript: form.action='Reg.php';">
+			<p>Don't have an Account?
+			<ul>
+				<li><a href="Reg.php">Sign up hare</a></li>
+			</ul>
+		</form>
+	</div>
+
+</body>
+</html>
