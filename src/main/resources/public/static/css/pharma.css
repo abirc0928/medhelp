@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.cover{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(120deg,#3e32a8,#e310c7);
+}
+.bar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width:120px;
+    cursor: pointer;
+}
+.bar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.bar ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+.bar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #00FFFF;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.bar ul li:hover::after{
+    width: 100%;
+}
+.logout{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    padding: 10px;
+    position: relative;
+    bottom: -15px;
+    bottom: -17px;
+}
+.text{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+}
+.text h1{
+    font-size: 50px;
+}
+.text p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+.text p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+.doc p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 25px;
+    position: relative;
+    left: -160px;
+}
+.doc2 p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 25px;
+    position: relative;
+    left: -180px;
+}
+.doc3 p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 25px;
+    position: relative;
+    left: -202px;
+}
+.text input{
+    width: 500px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: aliceblue;
+    font-size: 16px;
+}
+.text input[type="submit"]{
+    border: none;
+    outline: none;
+    background: #1CB8E3;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px; 
+    cursor: hand;
+}
+.text input[type="submit"]:hover{
+    background: #39dc79;
+    color: #000;
+}

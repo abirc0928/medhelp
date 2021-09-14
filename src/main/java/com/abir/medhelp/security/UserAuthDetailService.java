@@ -14,13 +14,14 @@ import org.springframework.stereotype.Service;
 
 import com.abir.medhelp.entity.UserEntity;
 import com.abir.medhelp.user.UserService;
+import com.abir.medhelp.utility.Constants;
 
 @Service
 public class UserAuthDetailService implements UserDetailsService {
 
 	@Autowired
 	private UserService userService;
-	
+
 	@Autowired
 	private PasswordEncoder passwordEncoder;
 
@@ -28,31 +29,28 @@ public class UserAuthDetailService implements UserDetailsService {
 	public UserDetails loadUserByUsername(String userMail) throws UsernameNotFoundException {
 
 		UserDetails userDetails = null;
-		
-		System.out.println(userMail);
 
 		UserEntity user = userService.findByUserMail(userMail);
 
 		try {
 			UserBuilder builder = null;
 
-			if (user != null) {
-				
-				List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
-				
-//				if(user.getRoleId() == 1) {
-//					authorities.add(new GrantedAuthorityImp("ROLE_SUPER_ADMIN"));
-//				}
-				
-				builder = org.springframework.security.core.userdetails.User.withUsername(userMail);
-				builder.password(passwordEncoder.encode(user.getPassword()));
-				builder.authorities(authorities);
-				
-				userDetails = builder.build();
+			List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
 
+			if (user.getRoleId() == Constants.ADMIN) {
+				authorities.add(new GrantedAuthorityImp("ROLE_ADMIN"));
+			} else if (user.getRoleId() == Constants.USER) {
+				authorities.add(new GrantedAuthorityImp("ROLE_USER"));
 			}
+
+			builder = org.springframework.security.core.userdetails.User.withUsername(userMail);
+			builder.password(passwordEncoder.encode(user.getPassword()));
+			builder.authorities(authorities);
+
+			userDetails = builder.build();
+
 		} catch (Exception e) {
-			e.printStackTrace();
+			throw new UsernameNotFoundException("Bad credential");
 		}
 
 		return userDetails;

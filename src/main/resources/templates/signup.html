@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<title>MedHelp</title>
+<link rel="stylesheet" type="text/css" href="/static/css/reg.css">
+</head>
+<body>
+	<img src="/static/img/Logo.png" class="Logo">
+	<div class="form">
+		<img src="/static/img/profile.png" class="profile">
+
+		<h1>Registration User</h1>
+
+		<form action="#" th:action="@{/signup}" th:object="${signupForm}"  method="POST">
+			<p>Name</p>
+			<input type="text" th:field="*{userName}" placeholder="Enter Name">
+			
+			<p>Password</p>
+			<input type="password" th:field="*{password}" placeholder="Enter Password">
+			
+			<p>Email</p>
+			<input type="text"  th:field="*{userEmail}" placeholder="Enter Email">
+			
+			<p>Address</p>
+			<input type="text" th:field="*{address}" placeholder="Enter Address">
+			
+			<p>Phone Number</p>
+			<input type="text" th:field="*{phoneNumber}"
+				placeholder="Enter Phone Number">
+			
+			<p>Date of Birth</p>
+			<input type="date" th:field="*{dateOfBirth}" placeholder="Enter Birth-date">
+			
+			<input type="submit" name="login" value="Submit">
+			<p>Have an Account?
+			<ul>
+				<li><a href="/login">log in</a></li>
+			</ul>
+
+		</form>
+	</div>
+</body>
+</html>

@@ -12,8 +12,17 @@ public class UserService {
 	private UserRepository repository;
 
 	public UserEntity findByUserMail(String userMail) {
+		System.out.println(userMail);
 		UserEntity user = repository.findByUserMail(userMail);
-		System.out.println(user.getUserName());
 		return user;
+	}
+
+	public UserEntity addUser(UserEntity userEntity) {
+		UserEntity entity = this.findByUserMail(userEntity.getUserMail());
+		if(entity != null) {
+			System.out.println("Duplicate email");
+			return null;
+		}
+		return repository.save(userEntity);
 	}
 }

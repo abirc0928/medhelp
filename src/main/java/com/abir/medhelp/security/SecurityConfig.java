@@ -24,9 +24,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		
 		auth.userDetailsService(UserAuthDetailService).passwordEncoder(passwordEncoder());
-
-//		auth.inMemoryAuthentication().withUser("chowdhury.rabby12@gmail.com").password(encoder.encode("123"))
-//				.roles("USER").and().withUser("admin").password(encoder.encode("admin")).roles("USER", "ADMIN");
 	}
 	
 	@Bean
@@ -41,7 +38,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.csrf().disable().authorizeRequests().antMatchers("/login").permitAll()
+		http.csrf().disable().authorizeRequests().antMatchers("/login", "/signup").permitAll()
 
 				.anyRequest().authenticated().and()
 

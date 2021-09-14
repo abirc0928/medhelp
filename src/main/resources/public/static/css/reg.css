@@ -1,13 +1,13 @@
 body{
     margin: 0;
-    background: url(/static/img/5.jpg);
+    background: url(/static/img/reg.jpg);
     background-size: cover;
     background-position: center;
     font-family: sans-serif;
 }
 .form{
-    width: 400px;
-    height: 480px;
+    width: 500px;
+    height: 800px;
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
     top: 50%;
@@ -24,7 +24,7 @@ body{
     border-radius: 50%;
     position: absolute;
     top: -50px;
-    left: 150px;
+    left: 200px;
     cursor: hand;
 }
 h1{
@@ -56,19 +56,8 @@ h1{
     color: #fff;
     font-size: 18px;
     border-radius: 20px; 
-    cursor: pointer;
+    cursor: hand;
 }
-
-.form input[type="submit"]{
-    border: none;
-    outline: none;
-    background: #1CB8E3;
-    color: #fff;
-    font-size: 18px;
-    border-radius: 20px; 
-    cursor: pointer;
-}
-
 .form input[type="submit"]:hover{
     background: #39dc79;
     color: #000;
