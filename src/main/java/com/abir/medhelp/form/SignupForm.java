@@ -1,6 +1,6 @@
-package com.abir.medhelp.signup;
+package com.abir.medhelp.form;
 
-public class SignupModel {
+public class SignupForm {
 
 	private String userName;
 	private String password;

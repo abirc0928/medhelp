@@ -1,11 +1,11 @@
-package com.abir.medhelp.medicine;
+package com.abir.medhelp.form;
 
 import java.io.Serializable;
 import java.util.List;
 
 import com.abir.medhelp.entity.MedicineEntity;
 
-public class MedicineModel implements Serializable {
+public class MedicineForm implements Serializable {
 
 	private long medicineId;
 	private String medicineName;

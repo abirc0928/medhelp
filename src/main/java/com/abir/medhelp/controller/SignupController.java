@@ -1,4 +1,4 @@
-package com.abir.medhelp.signup;
+package com.abir.medhelp.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.abir.medhelp.entity.UserEntity;
-import com.abir.medhelp.user.UserService;
+import com.abir.medhelp.form.SignupForm;
+import com.abir.medhelp.service.UserService;
 import com.abir.medhelp.utility.Constants;
 import com.abir.medhelp.utility.Utility;
 
@@ -20,12 +21,12 @@ public class SignupController {
 
 	@GetMapping("/signup")
 	public String signupForm(Model model) {
-		model.addAttribute("signupForm", new SignupModel());
+		model.addAttribute("signupForm", new SignupForm());
 		return "signup";
 	}
 
 	@PostMapping("/signup")
-	public String signup(@ModelAttribute SignupModel form, Model model) {
+	public String signup(@ModelAttribute SignupForm form, Model model) {
 
 		if (!isValidForm(form)) {
 			System.out.println("User data missing");
@@ -52,7 +53,7 @@ public class SignupController {
 		return "redirect:/login";
 	}
 
-	public boolean isValidForm(SignupModel model) {
+	public boolean isValidForm(SignupForm model) {
 
 		if (model.getUserName() == null || model.getUserName().length() == 0) {
 			System.out.println("user name is empty");

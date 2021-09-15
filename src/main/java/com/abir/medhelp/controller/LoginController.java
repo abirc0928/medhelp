@@ -1,4 +1,4 @@
-package com.abir.medhelp.login;
+package com.abir.medhelp.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -9,7 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.abir.medhelp.user.UserService;
+import com.abir.medhelp.dto.LoginDTO;
+import com.abir.medhelp.service.UserService;
 
 @Controller
 public class LoginController {

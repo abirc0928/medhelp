@@ -1,9 +1,10 @@
-package com.abir.medhelp.user;
+package com.abir.medhelp.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.abir.medhelp.entity.UserEntity;
+import com.abir.medhelp.repository.UserRepository;
 
 @Service
 public class UserService {

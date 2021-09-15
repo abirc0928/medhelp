@@ -55,12 +55,7 @@
     bottom: -15px;
     bottom: -17px;
 }
-.text{
-    width: 100%;
-    position: absolute;
-    text-align: center;
-    color: white;
-}
+
 .text h1{
     font-size: 60px;
     margin-top: 80px;

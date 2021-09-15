@@ -13,7 +13,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.abir.medhelp.entity.UserEntity;
-import com.abir.medhelp.user.UserService;
+import com.abir.medhelp.service.UserService;
 import com.abir.medhelp.utility.Constants;
 
 @Service

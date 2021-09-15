@@ -1,4 +1,4 @@
-package com.abir.medhelp.login;
+package com.abir.medhelp.service;
 
 import org.springframework.stereotype.Service;
 
