@@ -1,0 +1,11 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.text{
+    width: 100% !important;
+    position: absolute !important;
+    text-align: center !important;
+    color: white !important;
+}

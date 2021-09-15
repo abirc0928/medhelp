@@ -3,21 +3,11 @@
 <head>
 <title>Pharmacy</title>
 <link rel="stylesheet" href="/static/css/pharma.css">
+<link rel="stylesheet" href="/static/css/pharma.css">
 </head>
 <body>
 	<div class="cover">
-		<div class="bar">
-			<img src="/static/img/Logo.png" class="logo">
-			<ul>
-				<li><a href="/home">Home</a></li>
-				<li><a href="doctor.html">Doctor</a></li>
-				<li><a href="ambulance.html">Ambulance</a></li>
-				<li><a href="pharma.html">Pharmacy</a></li>
-				<li><a href="test.html">Medical Test</a></li>
-				<li><a href="/logout"><img src="/static/img/profile.png"
-						class="logout"> Logout </a></li>
-			</ul>
-		</div>
+		<div th:replace="header :: navbar">  </div>
 		<div class="text">
 			<br> <br> <br> <br> <br> <br>
 			<h1>THE PHARMACY YOU CAN TRUST</h1>

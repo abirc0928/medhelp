@@ -12,7 +12,6 @@ public class UserService {
 	private UserRepository repository;
 
 	public UserEntity findByUserMail(String userMail) {
-		System.out.println(userMail);
 		UserEntity user = repository.findByUserMail(userMail);
 		return user;
 	}
